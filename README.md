@@ -159,7 +159,6 @@ https://user-images.githubusercontent.com/97310975/174609538-0d8f9ef5-1add-415a-
 	+ 비밀번호 변경 ("/passwordUpdate")
 	+ 회원 탈퇴 ("/delete")
 	
-![마이페이지](https://user-images.githubusercontent.com/97310975/174593443-5a63721e-7ae9-46cf-9a91-79987fa358ed.gif)
 
 6. 관리자 페이지 (AdminController.java)
 	+ 박물관 등록 ("/adminCreate")
@@ -189,9 +188,10 @@ https://user-images.githubusercontent.com/97310975/174609538-0d8f9ef5-1add-415a-
 			+ AdminController.java -> deleteFiles() : 박물관 삭제 시 폴더에 존재하는 파일 삭제
 			+ UploadController.java -> @PostMapping("/deleteFile") : jsp화면에서 보여주는 이미지 삭제
 			+ FileCheckTask.java -> 잘못 업로드 된 파일 삭제, 불일치 파일 삭제
-				(최종적으로 submit를 안하고 게시물을 등록 하지 않은 경우, 폴더에는 이미지 파일이 생성됐지만 DB에는 저장이 되어있지 않은데, 
-					매일 새벽2시에 어제 날짜 폴더 경로에 있는 이미지 파일 존재여부를 비교하여 일치하지 않을 경우 이미지를 삭제함.)
-				(또는, 박물관 이미지를 수정하는 과정에서 이미지를 삭제하고 다른 이미지로 변경하였을 경우에 동작)
+	(최종적으로 submit를 안하고 게시물을 등록 하지 않은 경우, 폴더에는 이미지 파일이 생성됐지만 DB에는 저장이 되어있지 않은데, 매일 새벽2시에 어제 날짜 폴더 경로에 있는 이미지 파일 존재여부를 비교하여 일치하지 않을 경우 이미지를 삭제함.)
+	(또는, 박물관 이미지를 수정하는 과정에서 이미지를 삭제하고 다른 이미지로 변경하였을 경우에 동작)
+
+https://user-images.githubusercontent.com/97310975/174615619-8c64f03e-bd85-426f-ad7f-b7431218c931.mp4
 
 7. (사용자) 박물관 검색 페이지
 	+ 동적 sql 사용 (체크박스를 통한 검색 -> 테마별, 지역별, 테마별or지역별)
