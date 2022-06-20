@@ -118,6 +118,7 @@
 ## 구현기능 (BackEnd)
 1. 테이블 설계
   ![테이블](https://user-images.githubusercontent.com/97310975/174588724-540cde74-eb1f-4006-9116-d9195a38414d.png)
+	
 2. 회원가입 (MemberController.java)
 	+ 이메일 중복검사 ("/joinEmailCheck")
 		+ 이미 가입된 이메일이 존재 할 때 (1개 이상) 가입불가
@@ -131,6 +132,7 @@
 	+ 회원가입 성공 ("/joinSuccess")
 		+ 비밀번호 암호화해서 DB에 저장
 		+ 세션에 있던 이메일 삭제
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/97310975/174591025-0d9c1554-9ec9-4b12-bdf7-27020efe5616.gif)
 
 3. 로그인 (LoginController.java)
 	+ 로그인 ("/login")
