@@ -147,7 +147,12 @@
 		+ 회원 이름과 휴대폰 번호 또는 이메일을 입력해서 일치하는 정보가 존재 시 가입한 이메일로 인증번호 전송
 		+ 인증번호가 일치할 시 비밀번호 변경 페이지로 이동
 
-	https://user-images.githubusercontent.com/97310975/174609270-84f45b73-4c06-4424-b5c5-421c2cea1b82.mp4
+	
+
+https://user-images.githubusercontent.com/97310975/174609538-0d8f9ef5-1add-415a-98e9-c762990d831d.mp4
+
+
+	
 5. 마이페이지 (MemberController.java)
 	+ 전화번호 변경 ("/update")
 		+ 로그인한 사용자의 휴대전화 번호 변경
