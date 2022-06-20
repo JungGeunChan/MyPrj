@@ -133,7 +133,7 @@
 		+ 비밀번호 암호화해서 DB에 저장
 		+ 세션에 있던 이메일 삭제
 
-https://user-images.githubusercontent.com/97310975/174612096-5dabd7d1-1552-4433-8116-a2e0e9977d4b.mp4
+https://user-images.githubusercontent.com/97310975/174616173-8f69a40d-3d12-43e9-86e7-e9074e9e9702.mp4
 
 3. 로그인 (LoginController.java)
 	+ 로그인 ("/login")
