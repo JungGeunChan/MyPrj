@@ -132,8 +132,8 @@
 	+ 회원가입 성공 ("/joinSuccess")
 		+ 비밀번호 암호화해서 DB에 저장
 		+ 세션에 있던 이메일 삭제
-	
-![회원가입](https://user-images.githubusercontent.com/97310975/174593402-f9ef8fe0-e5e5-4901-aa34-4a70079d5b95.gif)
+
+https://user-images.githubusercontent.com/97310975/174612096-5dabd7d1-1552-4433-8116-a2e0e9977d4b.mp4
 
 3. 로그인 (LoginController.java)
 	+ 로그인 ("/login")
