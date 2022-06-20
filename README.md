@@ -196,3 +196,5 @@ https://user-images.githubusercontent.com/97310975/174615619-8c64f03e-bd85-426f-
 	+ 페이징 처리
 	+ 검색 후 상세페이지 이동 시 검색 결과 유지
 	+ 상세정보 페이지
+
+https://user-images.githubusercontent.com/97310975/174618886-03b4b313-19b8-4af3-8a0e-1dc072c4d77c.mp4
