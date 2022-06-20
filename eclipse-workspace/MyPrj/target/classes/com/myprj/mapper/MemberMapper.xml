@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+						"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+						
+<mapper namespace="com.myprj.mapper.MemberMapper">
+	<insert id="insert">
+		insert into tbl_member(memberName, memberId, memberPassword, memberBornyear, memberPhone, memberEmail, memberGender)
+		values (#{memberName}, #{memberId}, #{memberPassword}, #{memberBornyear}, #{memberPhone}, #{memberEmail}, #{memberGender})
+	</insert>
+	
+	<select id="checkEmail" resultType="int">
+		select count(*)
+		from tbl_member
+		where memberEmail = #{memberEmail}
+	</select>
+	
+	<select id="checkId" resultType="int">
+		select count(*)
+		from tbl_member
+		where memberId = #{memberId}
+	</select>
+	
+	
+	<select id="readMember" resultType="com.myprj.domain.MemberVO">
+		select *
+		from tbl_member
+		where memberId = #{memberId}
+	</select>
+	
+	<select id="checkPhone" resultType="int">
+		select count(*)
+		from tbl_member
+		where memberPhone = #{memberPhone}
+	</select>
+	 
+	<select id="memberLogin" resultType="com.myprj.domain.MemberVO">
+		select *
+		from tbl_member
+		where memberId = #{memberId}
+	</select>
+	
+	<delete id="memberDelete">
+		delete from tbl_member
+		where memberId = #{memberId}
+	</delete>
+	
+	<update id="memberPhoneUpdate">
+		update tbl_member
+		set memberPhone = #{memberPhone}
+		where memberId = #{memberId}
+	</update>
+	
+	<update id="memberPasswordUpdate">
+		update tbl_member
+		set memberPassword = #{memberPassword}
+		where memberId = #{memberId}
+	</update>	
+</mapper>

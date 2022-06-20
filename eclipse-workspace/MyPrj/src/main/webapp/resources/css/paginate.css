@@ -1,0 +1,60 @@
+@charset "UTF-8";
+.paginate {
+	list-style-type: none;
+	display : inline-block;
+	margin : 0;
+	padding : 0;
+}
+
+.btn-paginate {
+	display : inline-block;
+}
+
+.num, .prev, .next {
+	border : 1px solid #E5E5E5;
+}
+
+.btn-paginate > a {
+	text-decoration : none;
+	color : black;
+}
+
+.active {
+	border-color : #7D78FF;
+	color : #7D78FF;
+	pointer-events : none;
+}
+
+.active > a {
+	font-weight : bold;
+	color : #7D78FF;
+}
+
+@media screen and (min-width : 769px) {
+	.btn-paginate {
+		font-size : 0.8em;
+	}
+	
+	.btn-paginate {
+		padding : 5px 0px;
+	}
+	
+	.btn-paginate > a {
+		padding : 5px 10px;
+	}
+}
+
+@media screen and (max-width : 768px) {
+	.btn-paginate {
+		font-size : 10px;
+	}
+	
+	.btn-paginate {
+		padding : 3px 0px;
+	}
+	
+	.btn-paginate > a {
+		padding : 3px 6px;
+	}
+	
+}

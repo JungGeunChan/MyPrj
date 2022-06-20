@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+.btn-area {
+	text-align: right;
+}
+
+.swiper-container {
+	display : flex;
+	justify-content: space-between;
+	align-items: center;
+	overflow : hidden;
+	position : relative;
+}
+
+.swiper-pagination-bullet {
+	background: none !important;
+	border: 1px solid #7D78FF !important;
+	opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+	background: #D7CEF7 !important;
+	border: 1px solid #7D78FF !important;
+}
+
+.visual-pagination {
+	display : inline-block;
+	position : absolute;
+	bottom : 5px;
+}
+ 
+/* .controller {
+	float : right;
+	margin-left : 10px;
+}
+ */
+#btn-slide {
+	cursor : pointer;
+	border : none;
+	padding : 0;
+}
+
+.swiper-button-prev-unique, .swiper-button-next-unique {
+  	cursor : pointer;
+  	margin : 0;
+  	position : absolute;
+  	z-index : 1;
+}
+
+.swiper-button-prev-unique {
+	background: url("/resources/img/main/main_visual_prev.png");
+	left : 5px;
+}
+
+.swiper-button-next-unique {
+	background: url("/resources/img/main/main_visual_next.png");
+	right : 5px;
+}
+
+.swiper-button-prev:after, .swiper-button-next:after {
+	display : none;
+}
+/* 
+#slides-img-main {
+	width : inherit;
+	height : inherit;
+}
+ */
+.slides-img-main {
+	width : 100%;
+}
+
+.visual-pagination {
+	left : 50%;
+	transform: translate(-50%, 0%);
+}
+
+.admin-table {
+	width : 100%;
+}
+	
+@media screen and (min-width : 769px) {	
+	.swiper-container {
+		width : 250px;
+	}
+	.slides-img-main {
+		height : 150px;
+	}
+	.swiper-button-prev-unique, .swiper-button-next-unique {
+		background-size: 10px 19px;
+		width : 10px;
+		height : 19px;
+	}
+	
+	.admin-table > tbody {
+		width : 100%;
+	}
+	
+	.admin-table > tbody > tr {
+		width : 100%;
+	}
+	
+	.admin-table > tbody > tr > th {
+		text-align : left;
+		width : 20%;
+		padding-left : 20px;
+		padding-right : 10px;
+		min-width : 180px;
+	}
+	
+	.admin-table > tbody > tr > th > p {
+		margin : 10px 0 10px 0;
+	}
+}
+
+@media screen and (max-width : 768px) {
+	.swiper-container {
+		width : 150px;
+		margin : 0;
+	}
+	
+	.slides-img-main {
+		width : 100%;
+		height : 100px;
+	}
+	.swiper-button-prev-unique, .swiper-button-next-unique {
+		background-size: 7px 13px;
+		width : 7px;
+		height : 13px;
+	}
+	
+	.admin-table > tbody > tr > th {
+		text-align : left;
+		width : 25%;
+	}
+	
+	.admin-table > tbody > tr > th > p {
+		margin : 5px 0 5px 0;
+	}
+}

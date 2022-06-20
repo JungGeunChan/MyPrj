@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+						"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+						
+<mapper namespace="com.myprj.mapper.RecoverMemberMapper">
+	<select id="recoverMemberIdToPhone" resultType="com.myprj.domain.MemberVO">
+		select memberId, memberEmail
+		from tbl_member
+		where memberName = #{memberName} and memberPhone = #{memberPhone}
+	</select>
+	
+	<select id="recoverMemberIdToEmail" resultType="com.myprj.domain.MemberVO">
+		select memberId, memberEmail
+		from tbl_member
+		where memberName = #{memberName} and memberEmail = #{memberEmail}
+	</select>
+	
+	<select id="recoverMemberPasswordToEmail" resultType="com.myprj.domain.MemberVO">
+		select *
+		from tbl_member
+		where memberName = #{memberName} and memberId = #{memberId} and memberEmail = #{memberEmail}
+	</select>
+</mapper>

@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+/*---- Commons ----*/
+
+#memberEmail {
+	background : #E7E7E7;
+}
+
+.tbl-p {
+	margin : 10px 0 10px 0;
+}
+
+#man, #woman, label {
+	cursor : pointer;
+}
+
+.btn-area {
+	text-align : right;
+}
+
+/*---- Desktop ----*/
+
+@media screen and (min-width : 769px) {
+	input[type="text"], input[type="password"], select {
+		height : 40px;
+	}
+	
+	.join-step-content {
+		width : 80%;
+		margin : 50px auto;
+	}
+	
+	.btn-area {
+		margin : 50px auto;
+	}
+}
+
+/*---- Mobile ----*/
+
+@media screen and (max-width : 768px) {
+	
+	input[type="text"], input[type="password"], select {
+		height : 30px;
+	}
+	
+	.join-step-content {
+		width : 100%;
+		margin-top : 30px;
+	}
+	
+	.btn-area {
+		margin : 25px auto;
+	}
+}

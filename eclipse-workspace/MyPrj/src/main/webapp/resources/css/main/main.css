@@ -1,0 +1,320 @@
+@charset "UTF-8";
+
+/*---- Commons ----*/
+
+.swiper-container {
+	display : flex;
+	justify-content: space-between;
+	align-items: center;
+	width : 100%;
+	overflow : hidden;
+	position : relative;
+}
+
+.swiper-pagination-bullet {
+	background: white !important;
+	border: 2px solid #3F0B9F !important;
+	opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+	background: #3F0B9F !important;
+	border: 2px solid transparent !important;
+}
+
+.visual-pagination {
+	display : inline-block;
+	position : absolute;
+	right : 10px;
+	bottom : 10px;
+}
+
+.controller {
+	float : right;
+	margin-left : 10px;
+}
+
+#btn-slide {
+	cursor : pointer;
+	border : none;
+	padding : 0;
+}
+
+.swiper-button-prev-unique, .swiper-button-next-unique {
+  	cursor : pointer;
+  	margin : 0;
+  	position : absolute;
+  	z-index : 1;
+}
+
+.swiper-button-prev-unique {
+	background: url("/resources/img/main/main_visual_prev.png");
+	left : 10px;
+}
+
+.swiper-button-next-unique {
+	background: url("/resources/img/main/main_visual_next.png");
+	right : 10px;
+}
+
+.swiper-button-prev:after, .swiper-button-next:after {
+	display : none;
+}
+
+#slides-img-main {
+	width : inherit;
+	height : inherit;
+}
+
+
+/*---- 추천 박물관 ----*/
+
+.ico_recommend, .ico_user_review {
+	width : 50px;
+	height : 50px;
+}
+
+/* .ul-img-main-page-inner-content2 {
+	height : 145px;
+	overflow : hidden;
+} */
+
+.ul-main-page-inner-content {
+	display : inline-block;
+	list-style-type : none;
+	margin : 0;
+	padding : 0;
+	vertical-align : top;
+}
+
+.dot {
+	margin-right : 20px;
+	text-align: left;
+}
+.dot {
+	display : inline-block;
+	list-style-type : none;
+	margin : 10px 0px 10px 0px;
+	padding : 0;
+	vertical-align: top;
+	height : inherit;
+}
+/* .dot, .ul-img-main-page-inner-content2 {
+	display : inline-block;
+	list-style-type : none;
+	margin-top : 10px;
+	margin-bottom : 10px;
+	padding : 0;
+	vertical-align: top;
+	height : inherit;
+}
+ */
+
+.dot > li {
+	padding-left: 18px;
+}
+
+
+/*--- underline ----*/
+
+.dot > li > a {
+	display: inline-block;
+	text-decoration : none;
+	margin : 0;
+}
+
+.dot > li > a:link, .dot > li > a:visited {
+	color : black;
+	text-decoration : none;
+}
+
+.dot > li > a:hover {
+	cursor : pointer
+}
+
+.dot > li > a:after {
+	display : block;
+	content : "";
+	border-bottom : 1.5px solid #7D78FF;
+	transform : scaleX(0);
+	transition : transform 250ms ease-in-out;
+}
+
+.dot > li > a:hover:after {
+	transform : scaleX(1);
+}
+
+/*---- end of underline ----*/
+.top1 {
+	background : url("/resources/img/GoldMedal.png") no-repeat;
+}
+
+.top2 {
+	background : url("/resources/img/SilverMedal.png") no-repeat;
+}
+
+.top3 {
+	background : url("/resources/img/BronzeMedal.png") no-repeat;
+}
+
+.top1, .top2, .top3 {
+	background-size: 12px 20px;
+}
+
+.main-recommend-museum {
+	text-align : center;
+}
+
+
+
+
+
+
+
+
+
+/*---- Desktop ----*/
+
+@media screen and (min-width : 769px) {
+	.swiper-pagination-bullet, .swiper-pagination-bullet-active {
+		width : 20px !important;
+	}
+	
+	.swiper-pagination-bullet {
+		height : 20px !important;
+	}
+	
+	.swiper-button-prev-unique, .swiper-button-next-unique {
+		background-size : 27px 51px;
+		width : 27px;
+		height : 51px;
+	}
+	
+	#btn-slide {
+		width : 24px;
+		height : 24px;
+	}
+	
+	#btn-slide > img {
+		width : 24px;
+		height : 24px;
+	}
+	
+	.main-page-inner-content {
+		/* display : flex; */
+		margin-top : 10px;
+	}
+	
+	.main-page-inner-content-wrap {
+		/* display : flex; */
+	}
+	
+	.dot {
+		/* flex : 40%; */
+		max-width : 180px;
+	}
+	
+	/* .ul-img-main-page-inner-content2 {
+		flex : 60%;
+	} */
+	
+	.main-recommend-museum {
+		/* flex : 50%; */
+		padding-top : 10px;
+		border-top : 1px solid black;
+	}
+	
+	
+	
+	/* .ul-img-main-page-inner-content2 {
+		width : 100%;
+		max-width : 300px;
+		height : 145px;
+		overflow : hidden;
+	} */
+
+	/* .ul-img-main-page-inner-content2 > li {
+		width : inherit;
+		height : 100%;
+	}
+	 */
+	/* .ul-img-main-page-inner-content2 > li > img {
+		width : inherit;
+		height : inherit;
+	} */
+	.ul-main-page-inner-content > li:first-child {
+		font-size : 1.3em;
+	}
+	
+	.ul-main-page-inner-content > li:last-child {
+		font-size : 1em;
+	}
+}
+
+/*---- Mobile ----*/
+
+@media screen and (max-width : 768px) {
+	.swiper-pagination-bullet, .swiper-pagination-bullet-active {
+		width : 10px !important;
+	}
+	
+	.swiper-pagination-bullet {
+		height : 10px !important;
+	}
+	
+	.swiper-button-prev-unique, .swiper-button-next-unique {
+		background-size : 13px 25px;
+		width : 13px;
+		height : 25px;
+	}
+	
+	#btn-slide {
+		width : 14px;
+		height : 14px;
+	}
+	
+	#btn-slide > img {
+		width : 14px;
+		height : 14px;
+	}
+	
+	.main-recommend-museum {
+		margin-top : 10px;
+		padding-top : 10px;
+		border-top : 1px solid black;
+	}
+	
+	
+	.main-page-inner-content-wrap {
+		/* display : flex; */
+		/* display : inline-block; */
+		width : 100%;
+	}
+	
+	/* .dot {
+		flex : 30%;
+		display : inline-block;
+		min-width : 180px;
+	}
+	 */
+	 
+	/* .ul-img-main-page-inner-content2 {
+		flex : 70%;
+		display : inline-block;
+		max-width : 300px;
+		height : 145px;
+	} */
+	
+	.ul-main-page-inner-content > li:first-child {
+		font-size : 1em;
+	}
+	
+	.ul-main-page-inner-content > li:last-child {
+		font-size : 0.7em;
+	}
+	 
+	/* .ul-img-main-page-inner-content2 > li, .ul-img-main-page-inner-content2 > li > img {
+		width : 100%;
+		height : inherit;
+	} */
+}

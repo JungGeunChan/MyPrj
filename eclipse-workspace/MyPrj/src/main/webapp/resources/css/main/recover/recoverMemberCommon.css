@@ -1,0 +1,167 @@
+@charset "UTF-8";
+.frm-innerDiv {
+	text-align: center;
+}
+
+input[type="radio"], label {
+	cursor : pointer;
+}
+
+.recoverMember-content-header, .recoverMember-title, .frm-recoverMember, .frm-recoverMember-inner-div, .recoverMember-table {
+	width : 100%;
+}
+
+.recoverMember-content-header {
+	border-top : 1.5px solid black;
+	padding-top : 50px;
+	padding-bottom : 50px;
+}
+
+.recoverMember-title {
+	text-align: center;
+}
+
+.recoverMember-title > img, .recoverMember-title > span {
+	vertical-align : middle;
+}
+
+.recoverMember-title > img {
+	border-radius: 0.5rem;
+}
+
+.recoverMember-title > span {
+	font-weight : bold;
+}
+
+.recoverMember-title > p {
+	margin-top : 30px;
+	margin-bottom : 0px;
+	color : #666666;
+}
+
+.frm-recoverMember-inner-div {
+	border-top : 1px solid #EBEBEB;
+	border-bottom : 1px solid #EBEBEB;
+	padding-top : 50px;
+	padding-bottom : 50px;
+	background-color : #F8F8F8;		
+}
+
+.recoverMember-table {
+	border-collapse : separate;
+	border-spacing : 0px 10px;
+}
+
+.tr-p {
+	color : #666666;
+	margin : 0;
+}
+
+.recoverMember-table > tbody > tr > th {
+	vertical-align : top;
+	text-align : right;
+	padding : 0 30px 0 0;
+	
+}
+#memberId, #memberName, #memberEmail, #memberPhone1, #memberPhone2, #memberPhone3, #changePassword, #changePasswordChk, #input-certNumber {
+	height : 40px;
+}
+
+#memberId, #memberName, #memberEmail, #changePassword, #changePasswordChk, #input-certNumber {
+	line-height : 30px;
+	padding-left : 5px;
+	padding-top : 0px;
+	padding-bottom : 0px;
+	border-width : 0.5px;
+	border-radius: 0.2rem;
+	font-size: 1em;
+}
+
+#memberPhone1, #memberPhone2, #memberPhone3 {
+	padding-top : 0px;
+	padding-bottom : 0px;
+	padding-left : 4px;
+	border-width : 0.5px;
+	border-radius: 0.2rem;
+	font-size: 1em;
+}
+
+@media screen and (min-width : 769px) {	
+	.recoverMember-title > img {
+		max-width: 110px;
+		max-height: 110px;
+	}
+
+	.recoverMember-title > span {
+		font-size : 3em;	
+		margin-left : 30px;
+	}
+	
+	.recoverMember-title > p {
+		font-size : 1em;
+	}
+	
+	.recoverMember-table > tbody > tr > th {
+		width : 35%;
+	}
+	
+	#memberId, #memberName, #memberEmail, #input-certNumber {
+		width : 70%;
+		max-width : 350px;
+		min-width : 155px;
+	}
+	
+	.tr-p {
+		font-size : 1em;
+	}
+	
+	#memberPhone2, #memberPhone3 {
+		width : 25%;
+		max-width : 140px;
+		min-width : 80px;
+	}
+	
+	#changePassword, #changePasswordChk {
+		width : 65%;
+		max-width : 450px;
+		min-width : 155px;
+	}
+}
+
+@media screen and (max-width : 768px) {	
+	.recoverMember-title > img {
+		max-width: 55px;
+		max-height: 55px;
+	}
+	
+	.recoverMember-title > span {
+		font-size : 1.5em;
+		margin-left : 15px;
+	}
+	
+	.recoverMember-title > p {
+		font-size : 0.8em;
+	}
+	
+	.recoverMember-table > tbody > tr > th {
+		width : 35%;
+	}
+	
+	#memberId, #memberName, #memberEmail, #input-certNumber {
+		width : 60%;
+		max-width : 300px;
+	}
+	
+	.tr-p {
+		font-size : 0.8em;
+	}
+
+	#memberPhone2, #memberPhone3 {
+		width : calc((100% - 135px)/3);
+	}
+	
+	#changePassword, #changePasswordChk {
+		width : 85%;
+		max-width : 300px;
+	}
+}

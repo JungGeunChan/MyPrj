@@ -1,0 +1,105 @@
+@charset "UTF-8";
+.btn-area > input[name='keyword']{
+	line-height: 20px;
+	vertical-align: top;
+}
+
+.btn-area > select, .btn-area > button {
+    line-height: 20px;
+    vertical-align: top;
+}
+
+.admin-table {
+	width : 100%;
+}
+
+@media screen and (min-width : 769px) {
+	.admin-desktop {
+		display : block;
+	}
+	.admin-mobile {
+		display : none;
+	}
+	
+	tbody > tr > td {
+		text-align: center;
+		font-size : 0.8em;
+	}
+	
+	.wrapper {
+		display : flex;
+		height : 32px;
+	}
+	
+	.paginate-area, .btn-area {
+		flex : 50%;
+		height : inherit;
+	}
+	
+	.btn-area > input[name='keyword'], .btn-area > select, .btn-area > button {
+		font-size : 0.8em;
+	}
+	
+	.btn-area {
+		text-align: right;
+	}
+	
+	.btn-area > input[name='keyword'] {
+		padding : 4px 2px;
+		height : 20px;
+	}
+
+	.btn-area > select, .btn-area > button {
+		height: 32px;
+	}
+	
+}
+
+@media screen and (max-width : 768px) {
+	.admin-desktop {
+		display : none;
+	}
+	.admin-mobile {
+		display : block;
+	}
+	.admin-mobile > ul {
+		list-style-type: none;
+		padding : 0;
+		margin-top : 0;
+	}
+	.admin-mobile > ul > li {
+		border-bottom: 1px solid gray;
+		padding-bottom: 15px;
+		margin-bottom : 15px;
+	}
+	
+	.admin-mobile > ul > li > p {
+		font-size : 0.7em;
+	}
+	
+	.listNo {
+		font-size : 0.9em;
+		vertical-align: top;
+	}
+	
+	.btn-area > input[name='keyword'], .btn-area > select, .btn-area > button {
+		font-size : 10px;
+	}
+	
+	.btn-area {
+		margin-top : 15px;
+	}
+	
+	.btn-area > input[name='keyword']{
+		padding : 2px 1px;
+		height : 18px;
+	}
+
+	.btn-area > select, .btn-area > button {
+		height: 26px;
+	}
+	
+	#submit-btn {
+		font-size : 0.7em !important;
+	}
+}

@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+/*---- Commons ----*/
+	
+.form-agreement {
+	display : block;
+	width : 100%;
+}
+
+.groupbox {
+	border : 1px solid #CCCCCC;
+	
+}
+
+.groupbox-content {
+	height : 245px;
+	overflow-y : auto;
+	padding-left : 5%;
+	padding-right  : 5%;
+	padding-bottom : 30px;
+}
+
+.agreeLbl {
+	padding : 30px 25px;
+	background-color : #F8F8F8;
+}
+
+.agreeLbl > label:hover {
+	cursor : pointer
+}
+
+#serviceAgreement {
+	cursor : pointer;
+}
+
+.agreeLbl-ul {
+	list-style-type : none;
+	padding : 0;
+}
+
+#privacyAgreement1, #privacyAgreement2, #option-privacyAgreement1, #option-privacyAgreement2 {
+	cursor : pointer;
+}
+
+.agreeLbl-ul > li > div > label:hover {
+	cursor : pointer	
+}
+
+.agreeLbl-div {
+	margin-bottom : 10px;
+}
+
+.btn-area {
+	text-align : right;
+}
+	
+/*---- Desktop ----*/
+
+@media screen and (min-width : 769px) {
+	.agreement-content {
+		width : 80%;
+		margin : 0 auto;
+	}
+	
+	.agreeLbl-div > p {
+		display : inline;
+	}
+	
+	.groupbox {
+		margin-bottom : 50px;
+	}
+	
+	.btn-area {
+		margin : 50px auto;
+	}
+}
+
+/*---- Mobile ----*/
+
+@media screen and (max-width : 768px) {
+	
+	.agreement-content {
+		width : 100%;
+	}
+	
+	.agreeLbl-div > p {
+		display : block;
+		margin : 0 0 10px 0;
+	}
+	
+	.groupbox {
+		margin-bottom : 25px;
+	}
+	
+	.btn-area {
+		margin : 25px auto;
+	}
+}

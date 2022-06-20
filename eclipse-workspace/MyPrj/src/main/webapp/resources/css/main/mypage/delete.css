@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+.li-update > a {
+	border-bottom : 3px solid gray;
+}
+
+.li-passwordUpdate > a {
+	border-bottom : 3px solid gray;
+}
+
+.li-delete > a {
+	font-weight : bold;
+	border-bottom : 3px solid black;
+}
+
+.delete-title {
+	display : block;
+	width : 80%;
+	height : auto;
+	text-align: center;
+	margin : 0 auto 30px auto;
+}
+
+.delete-title > img {
+	width : 30%;
+	height : inherit;
+	vertical-align : middle;
+	max-width: 110px;
+	max-height: 110px;
+	border-radius: 0.5rem;
+}
+
+.delete-title > span {
+	vertical-align : middle;
+	font-weight : bold;
+	margin-left : 30px;
+}
+
+.delete-info-box {
+	border-bottom : 1px solid #EBEBEB;
+	background-color : #F8F8F8;
+}
+
+.delete-info-box > ul {
+	list-style-type : none;
+	margin : 0;
+	padding : 5% 5%;
+}
+
+.delete-info-box > ul > li {
+	position : relative;
+	padding-left : 15px;
+	margin-bottom : 10px;
+}
+
+.delete-info-box > ul > li:before {
+	position : absolute;
+	content : "·";
+	left : 0;
+}
+
+@media screen and (min-width : 769px) {
+	.delete-title > span {
+		font-size : 3em;
+	}
+	
+	.delete-info-box {
+		width : 100%;
+		margin : 0;
+	}
+}
+
+@media screen and (max-width : 768px) {
+	.join-table {
+		width : 80% !important;
+		margin : 0 auto;
+	}
+	
+	.delete-title > span {
+		font-size : 2em;
+	}
+	
+	.delete-info-box {
+		width : 100%;
+		margin : 0 auto;
+	}
+}

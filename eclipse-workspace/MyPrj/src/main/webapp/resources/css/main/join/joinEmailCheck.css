@@ -1,0 +1,122 @@
+@charset "UTF-8";
+/*---- Commons ----*/
+.join-step-content {
+	text-align: center;
+}
+
+.join-step-content > ul {
+	list-style-type : none;
+	padding : 0;
+	text-align : left;
+}
+
+.email-input {
+	width : 100%;
+	margin-top : 5%;
+}
+
+.first {
+	font-weight : bold;
+}
+
+#memberEmail {
+	height : inherit;
+	margin-right : 20px;
+	background: #F5F5F5;
+	border: none;
+	border-radius: 0.2rem;
+}
+
+.login-warn {
+	display : block;
+	color : #97000F;
+	font-weight : bold;
+	margin : 10px 0 10px 0;
+}
+
+.btn-area > .btn-submit {
+	margin-right : 10px;
+}
+
+.btn-area > .btn-submit:last-child {
+	margin-right : 0px;
+}
+
+
+/*---- Desktop ----*/
+
+@media screen and (min-width : 769px) {
+	.join-step-content {
+		width : 70%;
+		margin : 100px auto 100px auto;
+	}
+	
+	.join-step-content > p {
+		font-size : 1.7em;
+		font-weight : bold;
+	}
+	
+	.email-input {
+		display : table;
+	}
+	
+	.first {
+		display : table-cell;
+		width : 110px;
+		margin : 0;
+	}
+	
+	.second {
+		display : table-cell;
+		width : calc(100% - 110px);
+	}
+	
+	.btn-area {
+		text-align : center;
+		margin-top : 5%;
+	}
+	
+	#memberEmail {
+		width : calc(100% - 140px);
+	}
+}
+
+/*---- Mobile ----*/
+
+@media screen and (max-width : 768px) {
+	.join-step-content {
+		width : calc(100% - 30px);		
+		margin : 50px auto 50px auto;
+	}
+	
+	.join-step-content > p {
+		font-size : 1em;
+		font-weight : bold;
+		margin-top : 0px;
+		margin-bottom: 40px;
+	}
+	
+	.email-input {
+		display : block;
+	}
+	
+	.first {
+		display : block;
+		width : 100%;
+		margin-bottom : 15px;
+	}
+	
+	.second {
+		display : block;
+		width : 100%;
+	}
+	
+	.btn-area {
+		text-align : left;
+	}
+	
+	#memberEmail {
+		width : calc(100% - 100px);
+		margin-right : 10px;
+	}
+}

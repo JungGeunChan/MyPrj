@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+						"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.myprj.mapper.MuseumCategoryMapper">
+	<insert id="museumCategoryInsert">
+		insert into tbl_museum_category(museumNo, themeCode, areaCode)
+		values (#{museumNo}, #{themeCode}, #{areaCode})
+	</insert>
+	
+	<select id="findMuseumCategoryByMuseumNo" resultType="com.myprj.domain.MuseumCategoryVO">
+		select * from tbl_museum_category
+		where museumNo = #{museumNo}
+	</select>
+	
+	<delete id="museumCategoryDeleteAll">
+		delete from tbl_museum_category
+		where museumNo = #{museumNo}
+	</delete>
+</mapper>

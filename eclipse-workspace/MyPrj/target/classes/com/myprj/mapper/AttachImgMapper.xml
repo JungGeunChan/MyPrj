@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+						"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.myprj.mapper.AttachImgMapper">
+	<insert id="attachImgInsert">
+		insert into tbl_museum_img (museumNo, museumImgFileName, museumImgUploadPath, museumImgUuid, museumImgFileType)
+		values (#{museumNo}, #{museumImgFileName}, #{museumImgUploadPath}, #{museumImgUuid}, #{museumImgFileType})
+	</insert>
+	
+	<delete id="attachImgDelete">
+		delete from tbl_museum_img
+		where museumImgUuid = #{museumImgUuid}
+	</delete>
+	
+	<select id="findByMuseumNo" resultType="com.myprj.domain.AttachImgVO">
+		select * from tbl_museum_img
+		where museumNo = #{museumNo}
+	</select>
+	
+	<delete id="attachImgDeleteAll">
+		delete from tbl_museum_img
+		where museumNo = #{museumNo}
+	</delete>
+	
+	<select id="getOldFiles" resultType="com.myprj.domain.AttachImgVO">
+		select *
+		from tbl_museum_img
+		where museumImgUploadPath = to_char(sysdate-1, 'yyyy/mm/dd')
+	</select>
+	
+	<sql id="cri">
+		<where>
+			<if test="themeList != null">
+				themeCode in
+				<foreach item="theme" collection="themeList" index="index" open="(" separator="," close=")">
+					#{theme}
+				</foreach>
+			</if>
+			<if test="areaList != null">
+				and areaCode in
+				<foreach item="area" collection="areaList" index="index" open="(" separator="," close=")">
+					#{area}
+				</foreach>
+			</if>
+		</where>
+	</sql>
+	
+	<select id="userFindByMuseumNo" resultType="com.myprj.domain.AttachImgVO">
+		select museumNo, museumImgFileName, museumImgUploadPath, museumImgUuid, museumImgFileType
+		from (
+    		select ROW_NUMBER() OVER(PARTITION BY museumNo order by museumNo) AS RNUM, museumNo, museumImgFileName, museumImgUploadPath, museumImgUuid, museumImgFileType
+    		from tbl_museum_img
+		) tbl_museum_img
+		where museumNo in (
+    		select DISTINCT museumNo
+    		from tbl_museum_category
+			<include refid="cri"></include>
+		) and RNUM = 1
+	</select>
+	
+	<sql id="cri2">
+		<where>
+				museumNo in
+				<foreach item="no" collection="array" index="index" open="(" separator="," close=")">
+					#{no}
+				</foreach>
+			
+		</where>
+	</sql>
+	
+	<select id="mainFindByMuseumNo" resultType="com.myprj.domain.AttachImgVO">
+		select museumNo, museumImgFileName, museumImgUploadPath, museumImgUuid, museumImgFileType
+		from (
+    		select ROW_NUMBER() OVER(PARTITION BY museumNo order by museumNo) AS RNUM, museumNo, museumImgFileName, museumImgUploadPath, museumImgUuid, museumImgFileType
+    		from tbl_museum_img
+		) tbl_museum_img
+		<include refid="cri2"></include>
+		and RNUM=1
+	</select>
+</mapper>

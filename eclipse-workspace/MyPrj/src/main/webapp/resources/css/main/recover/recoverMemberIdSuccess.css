@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.recoverMember-page-content-wrapper {
+	width : 100%;
+}
+
+#recoverMemberId-Result {
+	margin-top : 40px;
+	font-size : 1.5em;
+}
+
+#recoverMemberId-Result > span {
+	font-weight : bold;
+	color : #970119;
+}

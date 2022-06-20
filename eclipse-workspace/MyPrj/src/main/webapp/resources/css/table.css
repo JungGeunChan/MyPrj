@@ -1,0 +1,180 @@
+@charset "UTF-8";
+
+
+/*---- Commons ----*/
+
+.join-form {
+	width : 100%;
+}
+
+.join-form-inner-div {
+	background-color : #F8F8F8;
+	border-top : 2px solid black;
+	border-bottom : 1px solid #EBEBEB;
+}
+
+.tbl-p {
+	margin : 10px 0 10px 0;
+}
+
+.result-id, .result-pw, .check-result-pw {
+	font-weight: bold;
+}
+
+.find-btn-area {
+	margin-top : 50px;
+	text-align: right;
+}
+
+#man, #woman, label {
+	cursor : pointer;
+}
+
+/*---- Desktop ----*/
+
+@media screen and (min-width : 769px) {
+	input[type="text"], input[type="password"], select {
+		height : 40px;
+	}
+	
+	#memberBornyear {
+		width : 80px;
+	}
+	
+	#memberPhone1 {
+		width : 80px;
+	}
+	
+	#memberPhone2, #memberPhone3 {
+		width : calc(100% / 2 - 95px);
+		min-width : 140px;
+		max-width : 150px;
+		padding-right : 0;
+	}
+	
+	.join-form-inner-div {
+		padding-top : 5%;
+		padding-left : 5%;
+		padding-right : 5%;
+		padding-bottom : 5%;
+	}
+
+	.join-table {
+		border-collapse : separate;
+		width : 100%;
+		border-spacing : 0px 20px;
+	}
+	
+	.join-table > tbody {
+		vertical-align : middle;
+	}
+	
+	.join-table > tbody > tr {
+		vertical-align : inherit;
+	}
+	
+	.join-table > tbody > tr > th {
+		vertical-align : top;
+		text-align : left;
+		width : 20%;
+		padding-left : 20px;
+		padding-right : 20px;
+	}
+	
+	.join-table > tbody > tr > th > p, .join-table > tbody > tr > td > p  {
+		margin : 10px 0 10px 0;
+		font-size : 1em;
+	}
+	
+	#memberName, #memberId, #memberPassword, #memberPasswordChk, #memberBornyear, #memberPhone1, #memberPhone2, #memberPhone3, #memberEmail, #changePassword, #changePasswordCheck, 
+	#museumCategoryCode, #museumName, #museumAddress, #museumTel, #museumHomepage {
+		padding-top : 0px;
+		padding-bottom : 0px;
+		padding-left : 5px;
+		border-width : 0.5px;
+		border-radius: 0.2rem;
+		font-size: 1em;
+		margin: 0;
+	}
+	
+	#memberName, #memberId, #memberPassword, #memberPasswordChk, #memberEmail, #changePassword, #changePasswordCheck,
+	#museumCategoryCode, #museumName, #museumAddress, #museumTel, #museumHomepage {	
+		width : 90%;
+		max-width : 400px;
+	}
+}
+
+/*---- Mobile ----*/
+
+@media screen and (max-width : 768px) {
+	input[type="text"], input[type="password"], select {
+		height : 30px;
+	}
+	
+	#memberBornyear {
+		width : 70px;
+	}
+	
+	#memberPhone1 {
+		width : 45px;
+	}
+	
+	#memberPhone2, #memberPhone3 {
+		width : calc(100% / 2 - 45px);
+		min-width : 50px;
+		max-width : 170px;
+		padding-right : 0;
+	}
+	
+	.join-form-inner-div {
+		padding-top : 25px;
+		padding-bottom : 25px;
+	}
+	
+	.join-table {
+		border-collapse : separate;
+		width : 100%;
+		border-spacing : 0px 20px;
+	}
+	
+	.join-table > tbody {
+		vertical-align : middle;
+	}
+	
+	.join-table > tbody > tr {
+		vertical-align : inherit;
+	}
+	
+	.join-table > tbody > tr > th {
+		vertical-align : top;
+		text-align : left;
+		width : 80px;
+		padding-left : 20px;
+	}
+	
+	.join-table > tbody > tr > td {
+		width : calc(100% - 80px);
+		font-size : 0.7em;
+	}
+	
+	.join-table > tbody > tr > th > p {
+		margin : 5px 0 5px 0;
+		font-size : 0.7em;
+	}
+	
+	#memberName, #memberId, #memberPassword, #memberPasswordChk, #memberBornyear, #memberPhone1, #memberPhone2, #memberPhone3, #memberEmail, #changePassword, #changePasswordchk,
+	#museumCategoryCode, #museumName, #museumAddress, #museumTel, #museumHomepage {
+		padding-top : 0px;
+		padding-bottom : 0px;
+		padding-left : 5px;
+		border-width : 0.5px;
+		border-radius: 0.2rem;
+		font-size: 0.7em;
+	}
+	
+	#memberName, #memberId, #memberPassword, #memberPasswordChk, #memberEmail, #changePassword, #changePasswordchk,
+	#museumCategoryCode, #museumName, #museumAddress, #museumTel, #museumHomepage {	
+		width : 90%;
+		max-width : 400px;
+	}
+}

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+						"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.myprj.mapper.MuseumMapper">
+	<sql id="criteria">
+		<trim prefix="(" suffix=") AND " prefixOverrides="OR">
+			<foreach item="type" collection="typeArr">
+				<trim prefix="OR">
+					<choose>
+						<when test="type == 'T'.toString()">
+							museumName like '%' || #{keyword} || '%'
+						</when>
+						<when test="type == 'C'.toString()">
+							museumAddress like '%' || #{keyword} || '%'
+						</when>
+					</choose>
+				</trim>
+			</foreach>
+		</trim>
+	</sql>
+	
+	<sql id="cri">
+		<where>
+			<if test="themeList != null">
+				themeCode in
+				<foreach item="theme" collection="themeList" index="index" open="(" separator="," close=")">
+					#{theme}
+				</foreach>
+			</if>
+			<if test="areaList != null">
+				and areaCode in
+				<foreach collection="areaList" item="area" index="index" open="(" separator="," close=")">
+					#{area}
+				</foreach>
+			</if>
+		</where>
+	</sql>
+	<select id="userMuseumDetail" resultType="com.myprj.domain.MuseumVO"> <!-- 테스트 -->
+		<![CDATA[
+			select *
+			from (
+				select /* + INDEX_DESC(tbl_museum pk_museumNo) */
+					rownum rn, museumNo, museumName, museumAddress, museumTel, museumHomepage
+				from 
+					tbl_museum
+				where museumNo in (
+					select distinct museumNo
+					from tbl_museum_category
+		]]>
+		<include refid="cri"></include>
+		<![CDATA[
+					and rownum <= #{pageNum} * #{amount}
+				)
+			)
+			where rn > (#{pageNum} -1) * #{amount}
+		]]>
+	</select>
+	
+	<select id="museumGetList" resultType="com.myprj.domain.MuseumVO">
+		<![CDATA[
+			select *
+			from (
+				select /* + INDEX_DESC(tbl_museum pk_museumNo) */
+					rownum rn, museumNo, museumName, museumAddress, museumTel, museumHomepage
+				from 
+					tbl_museum
+				where
+		]]>
+		<include refid="criteria"></include>
+		<![CDATA[
+					rownum <= #{pageNum} * #{amount}
+					order by museumNo DESC
+				 )
+			where rn > (#{pageNum} -1) * #{amount}
+		]]>
+	</select>
+	
+	<!-- 
+		tbl_museum에 먼저 데이터를 삽입하고 (id="insertMuseum"),
+		@Transaction(하나의 단위로 묶어서 하나라도 안되면 false) 하에 tbl_museum_img에 insert하기전에 tbl_museum의 museumNo의 값을 먼저 가져온다음,
+		그 값을 이용하여 fk로 등록된 tbl_museum_img의 museumNo를 처리함. 
+	 -->
+	<insert id="insertSelectKey">
+		<selectKey keyProperty="museumNo" order="BEFORE" resultType="int">
+			select seq_museum.nextval from dual
+		</selectKey>
+		insert into tbl_museum (museumNo, museumName, museumAddress, museumTel, museumHomepage)
+		values (#{museumNo}, #{museumName}, #{museumAddress}, #{museumTel}, #{museumHomepage})
+	</insert>
+	
+	<select id="museumGetTotal" resultType="int">
+		select count(*)
+		from tbl_museum 
+		where
+		<include refid="criteria"></include>
+		museumNo > 0
+	</select>
+	
+	<select id="userMuseumGetTotal" resultType="int">
+		select count(*)
+		from tbl_museum_category 
+		<include refid="cri"></include>
+		and museumNo > 0
+	</select>
+	
+	<select id="adminMuseumDetail" resultType="com.myprj.domain.MuseumVO">
+		select *
+		from tbl_museum
+		where museumNo = #{museumNo}
+	</select>
+	
+	<update id="museumUpdate">
+		update tbl_museum
+		set
+			museumName = #{museumName},
+			museumAddress = #{museumAddress},
+			museumTel = #{museumTel},
+			museumHomepage = #{museumHomepage}
+		where museumNo = #{museumNo}
+	</update>
+	
+	<delete id="museumDelete">
+		delete tbl_museum
+		where museumNo = #{museumNo}
+	</delete>
+	
+	<select id="getMuseumTotal" resultType="int">
+		select count(*)
+		from tbl_museum
+	</select>
+	
+	<select id="getRandomMuseum" resultType="com.myprj.domain.MuseumVO">
+		<![CDATA[
+		select *
+		from (
+    		select * from tbl_museum
+			order by DBMS_RANDOM.VALUE)
+			where ROWNUM <= 5
+		]]>
+	</select>
+</mapper>

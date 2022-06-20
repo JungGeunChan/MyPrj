@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+.ul-theme, .ul-area {
+	list-style-type : none;
+	padding : 0;
+	margin : 10px 0 10px 0;
+}
+.ul-theme > li, .ul-area > li {
+	display : inline;
+}
+.form-innerDiv {
+	width : 100%;
+	border : 1px solid #3F0B9F;
+	text-align: center;
+	border-radius: 0.2rem;
+	margin-bottom : 10px;
+}
+
+.selectTitle {
+	font-size : 1.5em;
+	margin : 0;
+	padding-top : 5px;
+	padding-bottom : 5px;
+	font-weight : bold;
+	background-color : #7D78FF;
+	color : white;
+}
+
+input[type='checkbox'], label {
+	cursor : pointer;
+}
+
+.btn-area {
+	text-align : center;
+}
+
+.searchResultDiv {
+	width : 100%;
+}
+
+.btn-detail {
+	background-color : transparent;
+	border : none;
+	padding : 0;
+	cursor : pointer;
+}
+
+.btn-detail > p {
+	margin : 0 0 5px 0;
+}
+.img-thumbnail {
+	border-radius: 0.25rem;	
+}
+
+.searchResultInnerDiv {
+	display : inline-block;
+	/* width : calc((100% - 20px) / 5); */
+	margin-bottom : 20px;
+}
+
+.searchResultInnerDiv2 {
+	text-align : center;
+}
+
+.btn-detail {
+	width : 95%;
+}
+	
+.btn-detail > img {
+	width : 15px;
+	height : 15px;
+}
+	
+.img-thumbnail {
+	width : 100%;
+	height : 120px;
+}
+
+.searchResultDiv {
+	margin : 20px 0px 0px 0px;
+}
+
+@media screen and (min-width : 769px) {
+	.searchResultDiv {
+		margin : 20px 0px 0px 0px;
+	}
+	
+	.searchResultDiv > p {
+		margin : 0px 0px 20px 0px;
+	}
+
+	.searchResultInnerDiv {
+		width : calc((100% - 20px) / 5);
+	}
+}
+
+@media screen and (max-width : 768px) {
+	.searchResultDiv {
+		margin : 10px 0px 0px 0px;
+	}
+	
+	.searchResultDiv > p {
+		margin : 0px 0px 10px 0px;
+	}
+	
+	.searchResultInnerDiv {
+		width : calc((100% - 10px) / 2);
+	}
+}

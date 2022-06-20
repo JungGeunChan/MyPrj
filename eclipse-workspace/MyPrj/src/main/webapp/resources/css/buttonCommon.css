@@ -1,0 +1,67 @@
+@charset "UTF-8";
+.btn-area {
+	width : 100%;
+}
+
+.btn-submit {
+	/* height : inherit; */
+	background : none;
+	border-top : none;
+	border-left : none;
+	border-right : none;
+	border-bottom: 2px solid #3F0B9F;
+	color : #3F0B9F;
+	
+	text-decoration : none;
+	padding : 2px 2px 2px 2px;
+	position : relative;
+	z-index : 1;
+	transition : all 0.25s ease-in-out;
+	font-weight : bold;
+	cursor : pointer;
+}
+
+.btn-submit:after {
+	content : "";
+	width : 100%;
+	height : 0%;
+	position : absolute;
+	bottom : 0;
+	left : 0;
+	transition : all 0.25s ease-in-out;
+	background : #3F0B9F;
+}
+
+.btn-submit:hover {
+	color : white;
+}
+
+.btn-submit:hover:after {
+	height : 100%;
+	z-index: -1;
+}
+
+.btn-black {
+	border-bottom: 2px solid black;
+	color : black;
+}
+
+.btn-black:after {
+	background : black;
+}
+
+/*---- Desktop ----*/
+
+@media screen and (min-width : 769px) {
+	.btn-submit {
+		font-size : 1.5em;
+	}
+}
+
+/*---- Mobile ----*/
+
+@media screen and (max-width : 768px) {	
+	.btn-submit {
+		font-size : 1em;
+	}
+}

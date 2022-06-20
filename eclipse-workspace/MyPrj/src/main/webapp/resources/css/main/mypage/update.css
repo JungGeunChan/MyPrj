@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+.li-update > a {
+	font-weight : bold;
+	border-bottom : 3px solid black;
+}
+
+.li-passwordUpdate > a {
+	border-bottom : 3px solid gray;
+}
+
+.li-delete > a {
+	border-bottom : 3px solid gray;
+}

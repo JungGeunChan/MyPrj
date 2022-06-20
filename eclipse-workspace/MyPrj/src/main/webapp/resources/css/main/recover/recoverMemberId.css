@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+@media screen and (min-width : 769px) {
+	
+}
+
+@media screen and (max-width : 768px) {
+	
+}
+
+/* #memberPhone1, #memberPhone2, #memberPhone3 {
+	padding-top : 0px;
+	padding-bottom : 0px;
+	padding-left : 5px;
+	border-width : 0.5px;
+	border-radius: 0.2rem;
+	font-size: 1em;
+}
+
+#memberPhone1 {
+	width : 60px;
+} */
+
+#p1, #p2 {
+	font-weight: bold;
+	margin : 0;
+}
+
+#p3 {
+	margin : 40px auto;
+	font-size : 1.1em;
+}
+
+#p3 > span, #recoverMemberId-Result > span {
+	color : #97000F;
+	font-weight: bold;
+}
