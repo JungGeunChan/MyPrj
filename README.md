@@ -132,7 +132,8 @@
 	+ 회원가입 성공 ("/joinSuccess")
 		+ 비밀번호 암호화해서 DB에 저장
 		+ 세션에 있던 이메일 삭제
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/97310975/174591025-0d9c1554-9ec9-4b12-bdf7-27020efe5616.gif)
+	
+![회원가입](https://user-images.githubusercontent.com/97310975/174593402-f9ef8fe0-e5e5-4901-aa34-4a70079d5b95.gif)
 
 3. 로그인 (LoginController.java)
 	+ 로그인 ("/login")
@@ -151,7 +152,9 @@
 		+ 로그인한 사용자의 휴대전화 번호 변경
 	+ 비밀번호 변경 ("/passwordUpdate")
 	+ 회원 탈퇴 ("/delete")
-  
+	
+![마이페이지](https://user-images.githubusercontent.com/97310975/174593443-5a63721e-7ae9-46cf-9a91-79987fa358ed.gif)
+
 6. 관리자 페이지 (AdminController.java)
 	+ 박물관 등록 ("/adminCreate")
 	+ 박물관 관리 ("/adminRead")
